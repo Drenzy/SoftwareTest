@@ -1,0 +1,17 @@
+﻿@page "/"
+
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize(Policy = "AuthenticatedUser")]
+<PageTitle>Home</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <div> You are loggined in</div>
+    </Authorized>
+    <NotAuthorized>
+        <div> You are not loggined in</div>
+    </NotAuthorized>
+</AuthorizeView>
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
